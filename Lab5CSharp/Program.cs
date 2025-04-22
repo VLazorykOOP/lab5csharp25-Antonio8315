@@ -1,58 +1,25 @@
 ﻿// See https://aka.ms/new-console-template for more information
-/// <summary>
-///  Top-level statements 
-///  Код програми (оператори)  вищого рівня
-/// </summary>
-///
-Console.WriteLine("Lab5 C# ");
-AnyFunc();
-
-/// <summary>
-/// 
-///  Top-level statements must precede namespace and type declarations.
-/// At the top-level methods/functions can be defined and used
-/// На верхньому рівні можна визначати та використовувати методи/функції
-/// </summary>
-void AnyFunc()
+using System;
+class Program
 {
-    Console.WriteLine(" Some function in top-level");
-}
-Console.WriteLine("Problems 1 ");
-AnyFunc();
-//  приклад класів
-UserClass cl = new UserClass();
-cl.Name = " UserClass top-level ";
-User.UserClass cl2 = new();
-cl2.Name = " UserClass namespace User ";
-
-
-
-
-/// <summary>
-/// 
-/// Top-level statements must precede namespace and type declarations.
-/// Оператори верхнього рівня мають передувати оголошенням простору імен і типу.
-/// Створення класу(ів) або оголошенням простору імен є закіченням  іструкцій верхнього рівня
-/// 
-/// </summary>
-
-namespace User
-{
-    class UserClass
+    static void Main()
     {
-        public string Name { get; set; }
-       public  UserClass()
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        Console.Write("Введіть номер завдання: ");
+        int n = int.Parse(Console.ReadLine()!);
+        switch (n)
         {
-            Name = "NoName";
+        case 1: 
+            Task_1.Task_1 myTask_1 = new Task_1.Task_1();
+            myTask_1.main1();
+        break;
+        case 2: 
+            Task_2.Task_2 myTask_2 = new Task_2.Task_2();
+            myTask_2.main2();
+        break;
+        default:
+            break;
         }
-        UserClass(string n)
-        {
-            Name = n;
-        }
+        Main();
     }
-
-}
-class UserClass
-{
-    public string Name { get; set; }
 }
